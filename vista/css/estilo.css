@@ -1,0 +1,130 @@
+/* =====================================================================
+   Tema institucional — colores del logo del Sindicato "Villa Aroma"
+   (azul del engranaje, rojo del escudo, amarillo del borde)
+   ===================================================================== */
+:root {
+    --va-azul: #1b3a8f;
+    --va-azul-oscuro: #12286a;
+    --va-rojo: #d62828;
+    --va-amarillo: #f4c20d;
+    --va-fondo: #f3f5fa;
+    --va-sidebar-w: 250px;
+
+    --bs-primary: var(--va-azul);
+    --bs-primary-rgb: 27, 58, 143;
+    --bs-link-color: var(--va-azul);
+    --bs-link-color-rgb: 27, 58, 143;
+    --bs-link-hover-color: var(--va-azul-oscuro);
+    --bs-body-bg: var(--va-fondo);
+    --bs-border-radius: .6rem;
+}
+
+body { background: var(--va-fondo); font-size: .95rem; }
+
+.btn-primary {
+    --bs-btn-bg: var(--va-azul); --bs-btn-border-color: var(--va-azul);
+    --bs-btn-hover-bg: var(--va-azul-oscuro); --bs-btn-hover-border-color: var(--va-azul-oscuro);
+    --bs-btn-active-bg: var(--va-azul-oscuro); --bs-btn-active-border-color: var(--va-azul-oscuro);
+}
+.btn-outline-primary {
+    --bs-btn-color: var(--va-azul); --bs-btn-border-color: var(--va-azul);
+    --bs-btn-hover-bg: var(--va-azul); --bs-btn-hover-border-color: var(--va-azul);
+    --bs-btn-active-bg: var(--va-azul);
+}
+.text-primary { color: var(--va-azul) !important; }
+.bg-primary { background-color: var(--va-azul) !important; }
+
+/* ---------- Barra lateral ---------- */
+.sidebar {
+    width: var(--va-sidebar-w);
+    background: linear-gradient(180deg, var(--va-azul) 0%, var(--va-azul-oscuro) 100%);
+    color: #fff;
+}
+@media (min-width: 992px) {
+    .sidebar { position: fixed; top: 0; bottom: 0; left: 0; z-index: 1030; }
+    .main-wrap { margin-left: var(--va-sidebar-w); }
+}
+.sidebar .brand {
+    display: flex; align-items: center; gap: .6rem;
+    padding: 1rem; border-bottom: 3px solid var(--va-amarillo);
+    color: #fff; text-decoration: none;
+}
+.sidebar .brand img { width: 52px; height: 52px; border-radius: 50%; background: #fff; }
+.sidebar .brand strong { display: block; font-size: 1rem; line-height: 1.1; }
+.sidebar .brand small { color: rgba(255,255,255,.7); font-size: .72rem; }
+.sidebar .nav-section { font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; color: rgba(255,255,255,.5); padding: 1rem 1.2rem .3rem; }
+.sidebar .nav-link {
+    color: rgba(255,255,255,.85); padding: .55rem 1.2rem; border-left: 3px solid transparent;
+    display: flex; align-items: center; gap: .65rem;
+}
+.sidebar .nav-link i { font-size: 1.1rem; }
+.sidebar .nav-link:hover { color: #fff; background: rgba(255,255,255,.08); }
+.sidebar .nav-link.active { color: #fff; background: rgba(255,255,255,.14); border-left-color: var(--va-amarillo); font-weight: 600; }
+.sidebar .offcanvas-body { padding: 0; }
+
+/* ---------- Barra superior ---------- */
+.topbar { background: #fff; border-bottom: 1px solid #e3e7ef; }
+.topbar .page-title { font-weight: 700; color: var(--va-azul-oscuro); font-size: 1.1rem; margin: 0; }
+.avatar {
+    width: 34px; height: 34px; border-radius: 50%; background: var(--va-rojo); color: #fff;
+    display: inline-flex; align-items: center; justify-content: center; font-weight: 700;
+}
+
+/* ---------- Tarjetas e indicadores ---------- */
+.card { border: 0; box-shadow: 0 1px 3px rgba(18,40,106,.08); }
+.card-header { background: #fff; border-bottom: 1px solid #edf0f6; font-weight: 600; }
+.kpi { border-left: 4px solid var(--va-azul); }
+.kpi.kpi-rojo { border-left-color: var(--va-rojo); }
+.kpi.kpi-amarillo { border-left-color: var(--va-amarillo); }
+.kpi.kpi-verde { border-left-color: #198754; }
+.kpi .kpi-icon { font-size: 2rem; opacity: .25; }
+.kpi .kpi-valor { font-size: 1.55rem; font-weight: 700; }
+
+.table thead th { font-size: .78rem; text-transform: uppercase; letter-spacing: .03em; color: #5b6478; background: #f7f8fc; }
+.table td { vertical-align: middle; }
+
+/* ---------- Ventanilla / QR ---------- */
+.lector-qr { border: 2px dashed #c5cce0; border-radius: .6rem; min-height: 260px; background: #fafbff; overflow: hidden; }
+.lector-qr video { border-radius: .5rem; }
+.chofer-card .foto {
+    width: 72px; height: 72px; border-radius: 50%; background: var(--va-azul); color: #fff;
+    display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: 700;
+}
+.cuota-item { cursor: pointer; }
+.cuota-item:hover { background: #f5f7ff; }
+
+/* ---------- Login / páginas simples ---------- */
+.pagina-simple {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #2b4db3 0%, var(--va-azul-oscuro) 60%);
+}
+.login-card { max-width: 410px; border-top: 5px solid var(--va-amarillo); }
+.login-card .logo { width: 120px; height: 120px; margin-top: -70px; border-radius: 50%; background: #fff; box-shadow: 0 4px 14px rgba(0,0,0,.25); }
+.cinta-bolivia { height: 5px; background: linear-gradient(90deg, #d52b1e 33%, #f9e300 33% 66%, #007934 66%); }
+
+/* ---------- Credencial imprimible ---------- */
+.credencial {
+    width: 86mm; height: 54mm; border-radius: 3mm; overflow: hidden; background: #fff;
+    border: 1px solid #ccd; position: relative; font-family: Arial, sans-serif;
+}
+.credencial .cab { background: var(--va-azul); color: #fff; display: flex; align-items: center; gap: 2mm; padding: 1.5mm 2.5mm; border-bottom: 1.2mm solid var(--va-amarillo); }
+.credencial .cab img { width: 10mm; height: 10mm; border-radius: 50%; background: #fff; }
+.credencial .cab b { font-size: 2.7mm; line-height: 1.1; display: block; }
+.credencial .cab small { font-size: 2mm; opacity: .85; }
+.credencial .cuerpo { display: flex; padding: 2mm 2.5mm; gap: 2.5mm; }
+.credencial .qr img { width: 27mm; height: 27mm; image-rendering: pixelated; }
+.credencial .datos { font-size: 2.5mm; line-height: 1.35; }
+.credencial .datos .nombre { font-size: 3.2mm; font-weight: 700; color: var(--va-azul-oscuro); }
+.credencial .pie { position: absolute; bottom: 0; left: 0; right: 0; height: 1.3mm; }
+@media print {
+    .no-print { display: none !important; }
+    body { background: #fff !important; }
+    .credencial { box-shadow: none; }
+}
+
+@media (max-width: 575.98px) {
+    .kpi .kpi-valor { font-size: 1.25rem; }
+}
+
+/* Montos siempre en una sola línea */
+.table td.text-end, .table th.text-end { white-space: nowrap; }
